@@ -3,7 +3,7 @@ STR_1=$(docker exec -it shardeum-dashboard operator-cli status | awk '/state:/ {
 STR_2="stopped"
 echo $STR_1
 echo $STR_2
-if [ $STR_1 eq $STR_2 ]
+if [ $STR_1 == $STR_2 ]
 then
         echo "Strings are equal"
 else
